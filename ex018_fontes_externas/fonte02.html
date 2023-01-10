@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        /* 
+                Tipos de format():
+                - opentype (otf)
+                - truetype (ttf)
+                - embedded-opentype
+                - truetype-att (Apple Advanced Typography)
+                - svg
+            */
+        @font-face { /* Para fontes externas */
+            font-family: 'Medieval';
+            src: url('fonts/the centurion.otf') format('opentype'), url('fonts/the centurion.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;               
+        }
+
+        @font-face {
+            font-family: 'Old';
+            src: url('fonts/old london.otf') format('opentype'), url('fonts/old london.ttf');
+            font-weight: normal;
+            font-style: normal; 
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Medieval', 'Times New Roman', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+
+        p {
+            font-family: 'Old', 'Times New Roman', Times, serif;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <!-- fontes externas site: https://www.dafont.com/pt/ 
+    Antes de selecionar a fonte verificar os grifos (acentuações da fonte) -->
+    <h1>Mundo Viking</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem dicta dolorum quisquam velit ipsum cum nemo obcaecati, deleniti magnam quam quas itaque. Dolorem numquam veritatis cupiditate eos expedita tempora.</p>
+</body>
+</html>
