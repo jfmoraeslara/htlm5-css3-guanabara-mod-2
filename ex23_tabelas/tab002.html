@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;            
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th { /* fixar cabeçalho */
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        /* efeito zebrada - opções:
+           tr:nth-child(odd) - linhas impar
+           tr:nth-child(even) - linhas pares
+           */
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
+        }
+
+        div#container {
+            overflow-x: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION
+                Legenda da tabela
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+
+    <div id="container">
+        <table>
+            <caption>População das Unidades Federativas do Brasil</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col" style="width: 90px;">População</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_estado_de_São_Paulo.svg.webp" alt="SP"> São Paulo</td>
+                    <td class="num">46 0241 937</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Minas_Gerais.svg.webp" alt="MG"> Minas Gerais</td>
+                    <td class="num">19 597 330</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_estado_do_Rio_de_Janeiro.svg.webp" alt="RJ"> Rio de Janeiro</td>
+                    <td class="num">15 989 929</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_da_Bahia.svg.webp" alt="BH"> Bahia</td>
+                    <td class="num">14 016 906</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Paraná.svg.webp" alt="PR"> Paraná</td>
+                    <td class="num">11 835 379</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Rio_Grande_do_Sul.svg.png" alt="RS"> Rio Grande do Sul</td>
+                    <td class="num">11 088 065	</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Pernambuco.svg.webp" alt="PE"> Pernambuco</td>
+                    <td class="num">9 051 113</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Ceará.svg.webp" alt="CE"> Ceará</td>
+                    <td class="num">8 936 431</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Pará.svg.webp" alt="PA"> Pará</td>
+                    <td class="num">8 442 962</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Santa_Catarina.svg.webp" alt="SC"> Santa Catarina</td>
+                    <td class="num">7 762 154</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Flag_of_Goiás.svg.webp" alt="GO"> Goiás</td>
+                    <td class="num">6 950 976</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Paraná.svg.webp" alt="MA"> Maranhão</td>
+                    <td class="num">6 800 605</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Espírito_Santo.svg.webp" alt="ES"> Espírito Santo</td>
+                    <td class="num">4 108 508</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_da_Paraíba.svg.png" alt="PB"> Paraíba</td>
+                    <td class="num">4 030 961</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Amazonas.svg.png" alt="AM"> Amazonas</td>
+                    <td class="num">3 952 262</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Mato_Grosso.svg.webp" alt="MT"> Mato Grosso</td>
+                    <td class="num">3 784 239</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Rio_Grande_do_Norte.svg.png" alt="RN"> Rio Grande do Norte</td>
+                    <td class="num">3 303 953</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Piauí.svg.webp" alt="PI"> Piauí</td>
+                    <td class="num">3 270 174</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/20px-Bandeira_de_Alagoas.svg.webp" alt="AL"> Alagoas</td>
+                    <td class="num">3 125 254</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/20px-Bandeira_do_Distrito_Federal_(Brasil).svg.png" alt="DF"> Distrito Federal</td>
+                    <td class="num">2 923 369</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Mato_Grosso_do_Sul.svg.webp" alt="MS"> Mato Grosso do Sul</td>
+                    <td class="num">2 833 742</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Sergipe.svg.webp" alt="SE"> Sergipe</td>
+                    <td class="num">2 211 868</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Rondônia.svg.png" alt="RO"> Rondônia</td>
+                    <td class="num">1 616 379</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/20px-Bandeira_do_Tocantins.svg.webp" alt="TO"> Tocantins</td>
+                    <td class="num">1 584 306</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Acre.svg.png" alt="AC"> Acre</td>
+                    <td class="num">3 270 174</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_do_Amapá.svg.webp" alt="AP"> Amapá</td>
+                    <td class="num">774 268</td>
+                </tr>
+                <tr>
+                    <td><img src="bandeiras/Bandeira_de_Roraima.svg.png" alt="RR"> Roraima</td>
+                    <td class="num">634 805</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">Total de habitantes</th>
+                    <td class="num"><strong>207 883 699</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, non repudiandae? At corrupti voluptate cum vitae officia autem? Est illum fuga sunt, pariatur ipsum eius sapiente omnis iure quis harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quisquam optio rerum amet, accusamus quae magnam voluptatem inventore odio obcaecati maxime eaque omnis, nam labore sapiente quam itaque porro iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quidem illo cumque voluptatibus quae libero alias fugiat, in atque nesciunt tempore quo unde, pariatur cum, odit quas praesentium quam cupiditate! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius error sunt sapiente delectus inventore. Dolore iste ducimus inventore voluptatibus in maxime, labore nam placeat consectetur est accusamus nostrum optio vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, non repudiandae? At corrupti voluptate cum vitae officia autem? Est illum fuga sunt, pariatur ipsum eius sapiente omnis iure quis harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quisquam optio rerum amet, accusamus quae magnam voluptatem inventore odio obcaecati maxime eaque omnis, nam labore sapiente quam itaque porro iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quidem illo cumque voluptatibus quae libero alias fugiat, in atque nesciunt tempore quo unde, pariatur cum, odit quas praesentium quam cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam unde ipsa et enim omnis quasi minima illo aut modi perspiciatis veritatis excepturi impedit quod officia, maxime consequuntur libero. Dignissimos.</p>    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, non repudiandae? At corrupti voluptate cum vitae officia autem? Est illum fuga sunt, pariatur ipsum eius sapiente omnis iure quis harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quisquam optio rerum amet, accusamus quae magnam voluptatem inventore odio obcaecati maxime eaque omnis, nam labore sapiente quam itaque porro iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quidem illo cumque voluptatibus quae libero alias fugiat, in atque nesciunt tempore quo unde, pariatur cum, odit quas praesentium quam cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam unde ipsa et enim omnis quasi minima illo aut modi perspiciatis veritatis excepturi impedit quod officia, maxime consequuntur libero. Dignissimos.</p>   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, non repudiandae? At corrupti voluptate cum vitae officia autem? Est illum fuga sunt, pariatur ipsum eius sapiente omnis iure quis harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quisquam optio rerum amet, accusamus quae magnam voluptatem inventore odio obcaecati maxime eaque omnis, nam labore sapiente quam itaque porro iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quidem illo cumque voluptatibus quae libero alias fugiat, in atque nesciunt tempore quo unde, pariatur cum, odit quas praesentium quam cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam unde ipsa et enim omnis quasi minima illo aut modi perspiciatis veritatis excepturi impedit quod officia, maxime consequuntur libero. Dignissimos.</p>   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, non repudiandae? At corrupti voluptate cum vitae officia autem? Est illum fuga sunt, pariatur ipsum eius sapiente omnis iure quis harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quisquam optio rerum amet, accusamus quae magnam voluptatem inventore odio obcaecati maxime eaque omnis, nam labore sapiente quam itaque porro iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quidem illo cumque voluptatibus quae libero alias fugiat, in atque nesciunt tempore quo unde, pariatur cum, odit quas praesentium quam cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nam unde ipsa et enim omnis quasi minima illo aut modi perspiciatis veritatis excepturi impedit quod officia, maxime consequuntur libero. Dignissimos.</p>   
+</body>
+</html>
